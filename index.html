@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vote</title>
+</head>
+<body>
+  <h1 id="message">Enregistrement du vote...</h1>
+
+  <script type="module">
+    import { createClient } from
+      'https://esm.sh/@supabase/supabase-js@2';
+
+    const SUPABASE_URL = 'TON_URL_SUPABASE';
+    const SUPABASE_ANON_KEY = 'TA_CLE_PUBLIQUE';
+
+    const supabase = createClient(
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY
+    );
+
+    const params = new URLSearchParams(
+      window.location.search
+    );
+
+    const answer = params.get('answer');
+    const message = document.getElementById('message');
+
+    async function vote() {
+      if (!['yes', 'no'].includes(answer)) {
+        message.textContent = 'Réponse invalide.';
+        return;
+      }
+
+      const { error } = await supabase
+        .from('votes')
+        .insert({ answer });
+
+      message.textContent = error
+        ? 'Erreur. Veuillez réessayer.'
+        : 'Merci pour votre réponse !';
+    }
+
+    vote();
+  </script>
+</body>
+</html>
