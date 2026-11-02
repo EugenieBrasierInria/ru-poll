@@ -14,7 +14,7 @@
         <h1>Merci pour votre contribution !</h1>
 
         <p>
-            Votre participation nous est précieuse.
+            Votre réponse (<strong id="message"></strong>) a bien été prise en compte !
             <br>
             Si vous souhaitez laisser un avis avec un
             questionnaire plus détaillé, suivez ce lien :
@@ -63,8 +63,8 @@
         .insert({ answer });
 
       message.textContent = error
-        ? 'Erreur. Veuillez réessayer.'
-        : 'Merci pour votre réponse !';
+        ? 'ERREUR'
+        : answer;
     }
 
     vote();
