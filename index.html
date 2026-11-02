@@ -4,10 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css">
   <title>Vote</title>
 </head>
 <body>
-  <h1 id="message">Enregistrement du vote...</h1>
+   <main class="container">
+        <div class="icon-check">✓</div>
+
+        <h1>Merci pour votre contribution !</h1>
+
+        <p>
+            Votre participation nous est précieuse.
+            <br>
+            Si vous souhaitez laisser un avis avec un
+            questionnaire plus détaillé, suivez ce lien :
+        </p>
+
+        <a href="https://votre-lien-questionnaire.fr"
+           class="btn-questionnaire"
+           target="_blank"
+           rel="noopener noreferrer">
+            Accéder au questionnaire →
+        </a>
+
+        <div class="separator">
+            <span>★</span>
+        </div>
+    </main>
+
 
   <script type="module">
     import { createClient } from

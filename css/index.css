@@ -1,0 +1,112 @@
+
+/* Import de la police */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fond général */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #eef3fa);
+    color: #17365d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenu principal */
+.container {
+    background: white;
+    max-width: 850px;
+    width: 100%;
+    padding: 70px 50px;
+    text-align: center;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(23, 54, 93, 0.10);
+    border-top: 5px solid #17365d;
+}
+
+/* Icône de validation */
+.icon-check {
+    width: 85px;
+    height: 85px;
+    background: #17365d;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    margin: 0 auto 30px;
+    box-shadow: 0 10px 25px rgba(23, 54, 93, 0.2);
+}
+
+/* Titre */
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #17365d;
+}
+
+/* Texte */
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #52657c;
+    margin-bottom: 35px;
+}
+
+/* Bouton questionnaire */
+.btn-questionnaire {
+    display: inline-block;
+    background: #17365d;
+    color: white;
+    text-decoration: none;
+    padding: 18px 35px;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(23, 54, 93, 0.15);
+}
+
+.btn-questionnaire:hover {
+    background: #24518a;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(23, 54, 93, 0.25);
+}
+
+/* Séparateur décoratif */
+.separator {
+    margin-top: 45px;
+    color: #e6a323;
+    font-size: 28px;
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+    .container {
+        padding: 45px 25px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .btn-questionnaire {
+        font-size: 15px;
+        padding: 16px 25px;
+    }
+}
